@@ -39,7 +39,7 @@ namespace Application.Activities
                     Category = request.Category,
                     Date = request.Date,
                     City = request.City,
-                    Venue = request.City
+                    Venue = request.Venue
                 };
 
                 this.context.Activities.Add(activity);
