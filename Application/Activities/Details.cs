@@ -1,7 +1,9 @@
-﻿using Domain;
+﻿using Application.Errors;
+using Domain;
 using MediatR;
 using Persistence;
 using System;
+using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -28,10 +30,11 @@ namespace Application.Activities
             {
                 var activity = await this.context.Activities.FindAsync(request.Id);
 
+                if (activity == null)
+                    throw new RestException(HttpStatusCode.NotFound, new { activity = "Not found" });
+
                 return activity;
             }
         }
-
-
     }
 }
