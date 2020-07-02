@@ -21,7 +21,7 @@ const SelectInput: React.FC<IProps> = ({
         placeholder={placeholder}
         options={options}
         />
-      {touched && error && <Label basic color="red"></Label>}
+      {touched && error && <Label basic color="red">{error}</Label>}
     </Form.Field>
   );
 };

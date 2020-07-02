@@ -26,7 +26,6 @@ export class ActivityFormValues implements IActivityFormValues {
     if (init && init.date) {
       init.time = init.date;
     }
-Object.assign(this, init);
-
+    Object.assign(this, init);
   }
 }

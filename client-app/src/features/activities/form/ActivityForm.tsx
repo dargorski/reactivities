@@ -158,7 +158,7 @@ const ActivityForm: React.FC<RouteComponentProps<DetailParams>> = ({
                   floated="right"
                   type="button"
                   content="Cancel"
-                  disabled={loading || invalid || pristine}
+                  disabled={loading}
                 />
               </Form>
             )}
