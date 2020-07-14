@@ -72,7 +72,7 @@ namespace Application.User
                     {
                         DisplayName = user.DisplayName,
                         Token = this.jwtGenerator.CreateToken(user),
-                        UserName = request.UserName,
+                        Username = request.UserName,
                         Image = null
                     };
 
